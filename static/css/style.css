@@ -8,10 +8,18 @@ body {
   font-family: "VT323", monospace;
   font-weight: 400;
   font-style: normal;
-  background: #151b23;
-  margin-left: 65px;
+  background: var(--bodydark);
+  margin-left: 58px;
   color: #fff;
   position: relative;
+}
+
+:root {
+  --bodydark: #151b23;
+  --navdark: #0d1117;
+  --white: #fff;
+  --black: black;
+  --bodylight: #ececec;
 }
 
 .silkscreen-regular {
@@ -39,22 +47,22 @@ body {
 }
 nav {
   display: flex;
-  background-color: #0d1117;
-  padding: 12px 20px;
+  background-color: var(--navdark);
+  padding: 15px 20px;
   align-items: center;
   justify-content: space-between;
-  color: rgb(255, 255, 255);
-  border-bottom: 1px #fff;
+  color: var(--bodylight);
+  border-bottom: 1px var(--white);
 }
 
 .nav-main-links li a {
   list-style: none;
-  color: #ececec;
+  color: var(--bodylight);
   margin-left: -10px;
   margin-top: 10px;
   text-decoration: none;
   font-family: "Silkscreen", sans-serif;
-  font-size: 20px;
+  font-size: 1.3rem;
 }
 
 .sidebar {
@@ -62,33 +70,33 @@ nav {
   top: 0;
   left: 0;
   height: 100%;
-  width: 65px;
-  background-color: #0d1117;
-  padding: 10px 0;
+  width: 58px;
+  background-color: var(--navdark);
   transition: all 0.3s ease;
   overflow: hidden;
+  align-items: center;
 }
 
 .sidebar.active {
-  width: 200px;
+  width: 170px;
 }
 
 .logo_content {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 12px 20px;
+  padding: 20px 20px;
 }
 
 .logo i {
-  font-size: 23px;
-  color: #ececec;
+  font-size: 1.3rem;
+  color: var(--bodylight);
   cursor: pointer;
 }
 
 .logo_name {
   font-size: 22px;
-  color: #ececec;
+  color: var(--bodylight);
   font-weight: 400;
   margin-left: 25px;
   gap: 2px;
@@ -114,7 +122,7 @@ nav {
 .nav_list a {
   display: flex;
   align-items: center;
-  color: #d7d7d7;
+  color: var(--bodylight);
   font-size: 20px;
   text-decoration: none;
   padding: 10px 10px;
@@ -123,15 +131,15 @@ nav {
 }
 
 .nav_list a:hover {
-  background: #ffffff;
-  color: #000000;
+  background: var(--white);
+  color: var(--black);
 }
 
 .nav_list i {
-  font-size: 18px;
-  margin-right: 15px;
+  font-size: 1rem;
+  padding: 0 10px;
   min-width: 40px;
-  text-align: center;
+  align-items: center;
 }
 
 .link_name {
@@ -175,18 +183,18 @@ nav {
   display: flex;
   position: absolute;
   align-items: center;
-  border: 1px solid #ececec;
+  border: 1px solid var(--bodylight);
   border-radius: 5px;
-  width: 25%;
-  height: 35px;
+  width: 18%;
+  height: 32px;
   max-width: 250px;
   justify-content: center;
 }
 
 .search-input-container i {
   margin-right: 15px;
-  color: #ececec;
-  font-size: 1rem;
+  color: var(--bodylight);
+  font-size: 0.9rem;
   margin-left: 15px;
   cursor: pointer;
 }
@@ -198,63 +206,97 @@ nav {
   height: auto;
   margin-left: 2px;
   margin-right: 5px;
-  color: white;
-  font-size: 1.2rem;
-  background-color: #0d1117;
+  color: var(--white);
+  font-size: 1.05rem;
+  background-color: var(--navdark);
 }
 
 .search-input-container input::placeholder {
-  color: #a7a3a3;
+  color: var(--bodylight);
 }
 .account-logo a img {
-  width: 38px;
-  height: 39px;
+  width: 32px;
+  height: 33px;
   border-radius: 50%;
   margin-top: -1px;
 }
 .notification-logo a img {
-  width: 30px;
-  height: 30px;
-  margin-right: 25px;
+  width: 28px;
+  height: 28px;
+  margin-right: 20px;
 }
 .create-logo a img {
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   margin-right: 20px;
 }
 .login-btn button {
-  background-color: #1e1e1e;
-  color: #ececec;
-  border-color: #ececec;
-  border: 1px solid white;
+  background-color: var(--navdark);
+  color: var(--bodylight);
+  border-color: var(--bodylight);
+  border: 1px solid var(--white);
   width: 60px;
-  height: 35px;
+  height: 32px;
   margin-right: 20px;
   border-radius: 5px;
+  font-size: 1.05rem;
 }
 .login-btn button:hover {
-  background-color: rgb(255, 255, 255);
-  color: black;
+  background-color: var(--white);
+  color: var(--black);
   transition: 0.4s ease;
 }
 .signup-btn button {
-  background-color: #1e1e1e;
-  color: #ececec;
-  border-color: #ececec;
-  border: 1px solid white;
+  background-color: var(--navdark);
+  color: var(--bodylight);
+  border-color: var(--bodylight);
+  border: 1px solid var(--white);
   width: 65px;
-  height: 35px;
+  height: 32px;
   margin-right: 20px;
   border-radius: 5px;
+  font-size: 1.05rem;
 }
 
 .signup-btn button:hover {
-  background-color: rgb(255, 255, 255);
-  color: black;
+  background-color: var(--white);
+  color: var(--black);
   transition: 0.4s ease;
 }
 hr {
   border: none;
-  border-top: 2px solid white; /* Solid white border on top */
+  border-top: 2px solid var(--white);
   margin: 0px auto;
 }
+
+/* #preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bodydark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5 ease;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #ccc;
+  border-top-color: var(--navdark);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
